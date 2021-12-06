@@ -11,9 +11,9 @@ class Beverage extends StatefulWidget {
 class _BeverageState extends State<Beverage> {
 
   List beverage = [
-    {"item":"Cappuccino","price":"100","image":"https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1024-512,f_auto,q_auto:best/newscms/2019_33/2203981/171026-better-coffee-boost-se-329p.jpg"},
-    {"item":"Coffee","price":"50","image":"https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1024-512,f_auto,q_auto:best/newscms/2019_33/2203981/171026-better-coffee-boost-se-329p.jpg"},
-    {"item":"Tea","price":"150","image":"https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1024-512,f_auto,q_auto:best/newscms/2019_33/2203981/171026-better-coffee-boost-se-329p.jpg"}
+    {"item":"Cappuccino","price":"100","image":"assets/tea.jpg"},
+    {"item":"Coffee","price":"50","image":"assets/coffee.jpg"},
+    {"item":"Tea","price":"150","image":"assets/cappu.jpg"}
   ];
   @override
   Widget build(BuildContext context) {
@@ -32,8 +32,9 @@ class _BeverageState extends State<Beverage> {
                 Positioned(
                   child:Container(
                     height: 180,
+                    width: MediaQuery.of(context).size.width,
                     color: Colors.black,
-                    child: Image.network(beverage[index]['image']),
+                    child: Image.asset("assets/cappu.jpg",fit: BoxFit.cover,),
                   ),
                 ),
                 Positioned(
